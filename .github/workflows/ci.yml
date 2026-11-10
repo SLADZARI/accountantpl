@@ -21,4 +21,4 @@ jobs:
       - name: Production build
         run: npm run build
       - name: Confirm Vercel output
-        run: test -f dist/index.html
+        run: node scripts/check-build.mjs

@@ -6,6 +6,7 @@ const js = readFileSync("app.js","utf8");
 const vercel = JSON.parse(readFileSync("vercel.json","utf8"));
 assert.match(html, /lang="pl"/);
 assert.match(html, /name="viewport"/);
+assert.match(html, /<script\s+type="module"\s+src="\/app\.js"><\/script>/);
 for (const id of ["transactions","month-name","theme-toggle","export-btn","search","type-filter"]) assert.ok(html.includes('id="'+id+'"'),"Missing UI id: "+id);
 assert.match(css, /max-width:760px/);
 assert.match(css, /prefers-reduced-motion/);
