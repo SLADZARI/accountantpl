@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9fa">
+  <meta name="description" content="AccountantPL — demonstracyjny panel finansowy.">
+  <title>AccountantPL · Przegląd</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do treści</a>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Nawigacja główna">
+      <div class="brand"><div class="brand-mark">A<span>.</span></div><div><strong>AccountantPL</strong><small>Finance workspace</small></div></div>
+      <div class="nav-label">PRZESTRZEŃ ROBOCZA</div>
+      <nav aria-label="Sekcje">
+        <button class="nav-item active" data-view="overview" aria-current="page"><span aria-hidden="true">▦</span> Przegląd</button>
+        <button class="nav-item" data-view="transactions"><span aria-hidden="true">≡</span> Operacje</button>
+        <button class="nav-item" data-view="reports"><span aria-hidden="true">▥</span> Raporty</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="dot"></span> Tryb demonstracyjny <small>Wyłącznie dane przykładowe</small></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="mobile-brand">A<span>.</span> <b>AccountantPL</b></div>
+        <div class="crumb">Workspace <span>/</span> <strong id="section-label">Przegląd</strong></div>
+        <div class="top-actions"><span class="demo-tag">DEMO</span><button type="button" class="theme-btn" id="theme-toggle" aria-label="Przełącz motyw">◐</button><span class="avatar" aria-label="Konto demonstracyjne">AP</span></div>
+      </header>
+      <main id="main" class="main">
+        <div class="heading"><div><div class="eyebrow">PANEL FINANSOWY</div><h1 id="page-title">Przegląd finansów</h1><p class="sub">Podsumowanie przepływów i operacji w wybranym okresie.</p></div><button class="button secondary" id="export-btn">Eksport CSV <span aria-hidden="true">↗</span></button></div>
+        <section class="month-wrap" aria-label="Wybierz miesiąc">
+          <button class="month-peek previous" id="prev-month" aria-label="Poprzedni miesiąc"><span id="prev-label"></span></button>
+          <div class="month-card"><div><div class="month-overline">WYBRANY OKRES</div><h2 id="month-name"></h2><div class="month-note">Zestawienie miesięczne · PLN</div></div><div class="month-status"><span class="status-dot"></span> Dane przykładowe</div></div>
+          <button class="month-peek next" id="next-month" aria-label="Następny miesiąc"><span id="next-label"></span></button>
+        </section>
+        <section class="stats" aria-label="Podsumowanie">
+          <article class="stat"><div class="stat-head">Przychody <span>↗</span></div><div class="stat-value" id="income">—</div><small>Łącznie w okresie</small></article>
+          <article class="stat"><div class="stat-head">Wydatki <span>↘</span></div><div class="stat-value" id="expenses">—</div><small>Łącznie w okresie</small></article>
+          <article class="stat balance"><div class="stat-head">Saldo netto <span>◈</span></div><div class="stat-value" id="balance">—</div><small>Przychody minus wydatki</small></article>
+        </section>
+        <section class="ledger" aria-labelledby="ledger-title">
+          <div class="ledger-heading"><div><h2 id="ledger-title">Operacje</h2><p>Wybierz dowolny wiersz, aby zobaczyć szczegóły.</p></div><div class="ledger-tools"><label class="search-wrap"><span aria-hidden="true">⌕</span><span class="sr-only">Szukaj operacji</span><input id="search" type="search" placeholder="Szukaj operacji…" autocomplete="off"></label><select id="type-filter" aria-label="Filtruj typ operacji"><option value="all">Wszystkie</option><option value="income">Przychody</option><option value="expense">Wydatki</option></select></div></div>
+          <div class="table-head"><span>OPERACJA</span><span>KATEGORIA</span><span>DATA</span><span>KWOTA</span></div>
+          <div id="transactions" class="transactions" aria-live="polite"></div>
+          <div class="ledger-footer"><span id="result-count">—</span><span>Waluta: PLN</span></div>
+        </section>
+        <footer class="footer">AccountantPL · Prototype v0.1 <span>Bez połączenia z bankiem lub systemem księgowym</span></footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
