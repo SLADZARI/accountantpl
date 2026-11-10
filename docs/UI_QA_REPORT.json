@@ -1,0 +1,39 @@
+{
+  "created": "2026-11-10",
+  "status": "local mockup; not published",
+  "sources_unchanged": true,
+  "responsive_widths": [
+    1440,
+    1280,
+    1024,
+    810,
+    768,
+    760,
+    640,
+    390,
+    375,
+    320
+  ],
+  "overflow": false,
+  "preview_count": 2,
+  "cta_height_mobile_px": 50,
+  "cta_height_desktop_px": 51,
+  "navigation": [
+    "01 => Rejestry i VAT",
+    "02 => Przegląd",
+    "mobile mouse click",
+    "mobile Enter",
+    "browser back"
+  ],
+  "palette_check": "PASS",
+  "limitations": [
+    "Safari and physical iPhone not tested",
+    "Original app functionality not re-audited",
+    "Original variant B retains external Google Fonts"
+  ],
+  "sha256": {
+    "index.html": "ccfde1b378632f3428091a187b6c9033aeb98f2766cc3196effcc5b3270627a1",
+    "variant-a.html": "6c88b7f44a8508670c023701dc274548779c8608230e3849d49d2b62f1e28a5a",
+    "variant-b.html": "46cc7af83eba43809ae14b733eb3408211d1306ff307d3dede13412ea8c62754"
+  }
+}
